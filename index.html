@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Technicians - Mock Exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // or 'media'
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'gemini-dark-bg': '#131314', // Main background
+                        'gemini-surface': '#1e1f20', // Surface for cards, inputs
+                        'gemini-surface-contrast': '#282a2c', // Slightly lighter surface
+                        'gemini-primary-text': '#e8eaed', // Primary text
+                        'gemini-secondary-text': '#9aa0a6', // Secondary text
+                        'gemini-accent': '#8ab4f8', // Accent color (e.g., for links, highlights)
+                        'gemini-border': '#3c4043', // Borders
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gemini-dark-bg text-gemini-primary-text font-sans antialiased flex flex-col md:flex-row min-h-screen">
+
+    <aside class="w-full md:w-64 lg:w-72 xl:w-80 bg-gemini-surface-contrast p-4 md:p-6 space-y-6 shadow-lg md:min-h-screen md:sticky md:top-0 shrink-0 order-1 md:order-1">
+        <h2 class="text-2xl font-semibold text-gemini-accent mb-6">Navigation</h2>
+        <nav class="space-y-3">
+            <button id="btnHome" class="nav-button w-full text-left px-4 py-3 rounded-lg text-gemini-primary-text transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gemini-accent">
+                Home
+            </button>
+            <button id="btnSubmit" class="nav-button w-full text-left px-4 py-3 rounded-lg text-gemini-primary-text transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gemini-accent">
+                Submit Exam
+            </button>
+            <button id="btnNewExam" class="nav-button w-full text-left px-4 py-3 rounded-lg text-gemini-primary-text transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gemini-accent">
+                New Exam
+            </button>
+        </nav>
+        <div class="mt-auto pt-6">
+            <p class="text-xs text-gemini-secondary-text text-center">&copy; 2025 Kidaken Corporation</p>
+        </div>
+    </aside>
+
+    <main class="flex-grow p-4 md:p-8 order-3 md:order-2 overflow-y-auto">
+        <header class="bg-gemini-surface p-6 rounded-xl shadow-md mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gemini-accent text-center">JURISPRUDENCE – EXAM - CONDITIONS FOR SALE</h1>
+        </header>
+
+        <div id="exam-content" class="bg-gemini-surface p-6 md:p-8 rounded-xl shadow-md">
+            <div id="exam-instructions" class="mb-6 p-4 bg-gemini-surface-contrast rounded-lg border border-gemini-border">
+                <p class="text-md text-gemini-accent font-semibold text-center">
+                    Please select two (2) options for each question.
+                </p>
+            </div>            
+            <div id="question-container" class="mb-6">
+                <h2 id="question-number" class="text-xl font-semibold text-gemini-accent mb-2">Question X of Y</h2>
+                <p id="question-text" class="text-lg text-gemini-primary-text leading-relaxed">Loading question...</p>
+            </div>
+
+            <div id="choices-container" class="space-y-4">
+                </div>
+
+            <div id="navigation-buttons" class="mt-8 flex justify-between">
+                <button id="btnPrevious" class="px-6 py-3 bg-gemini-accent text-gemini-dark-bg font-semibold rounded-lg hover:bg-blue-400 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                <button id="btnNext" class="px-6 py-3 bg-gemini-accent text-gemini-dark-bg font-semibold rounded-lg hover:bg-blue-400 transition-colors duration-150">Next</button>
+            </div>
+             <div id="score-container" class="mt-8 p-4 bg-gemini-surface-contrast rounded-lg text-center hidden">
+                <h2 class="text-2xl font-semibold text-gemini-accent mb-2">Exam Completed!</h2>
+                <p class="text-xl text-gemini-primary-text">Your Score: <span id="score-value">0</span>/<span id="total-questions-value">0</span></p>
+            </div>
+        </div>
+    </main>
+
+    <aside class="w-full md:w-72 lg:w-80 xl:w-96 bg-gemini-surface-contrast p-4 md:p-6 flex flex-col shadow-lg md:min-h-screen md:sticky md:top-0 shrink-0 order-2 md:order-3">
+        <h2 class="text-2xl font-semibold text-gemini-accent mb-6">Feedback & Notes</h2>
+        <div id="feedback-content-area" class="flex-grow space-y-4 overflow-y-auto pr-2 text-gemini-secondary-text leading-relaxed pb-4">
+            <p>Select a question or click on a "Learn More" button next to an answer to see relevant feedback here.</p>
+        </div>
+        <div class="mt-auto pt-4 border-t border-gemini-border">
+            <label for="chat-input" class="block text-sm font-medium text-gemini-primary-text mb-2">Chat / Ask a question:</label>
+            <textarea id="chat-input" rows="3" class="w-full p-3 bg-gemini-surface border border-gemini-border rounded-lg text-gemini-primary-text focus:ring-2 focus:ring-gemini-accent focus:border-transparent resize-none" placeholder="Type your question here..."></textarea>
+            <button id="btnSendChat" class="mt-3 w-full px-4 py-2.5 bg-gemini-accent text-gemini-dark-bg font-semibold rounded-lg hover:bg-blue-400 transition-colors duration-150">Send</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>

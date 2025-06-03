@@ -1,0 +1,496 @@
+<!--
+  questions-and-answers.html
+  Data for the mock exam - Jurisprudence.
+  Each question is a div with class "question-item".
+  - It has a data-id attribute for unique identification.
+  - The question text is in a p tag with class "question-text".
+  - Choices are in a div with class "choices".
+  - Each choice is a div with class "choice-option".
+    - It has a data-correct="true" attribute if it's one of the two correct answers.
+    - The choice text is within the div.
+  The JavaScript will select 2 correct and 3 incorrect answers from this pool to display 5 choices.
+-->
+
+<div id="exam-data-source" style="display: none;">
+
+    <div class="question-item" data-id="juris_A_001">
+        <p class="question-text">According to the provided text on NAPRA Drug Schedules, which two statements accurately describe their governance and adoption?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Ontario has adopted the NAPRA drug schedules.</div>
+            <div class="choice-option" data-correct="true">The National Drug Schedule Advisory Committee (NDSAC) is responsible for determining drug schedules.</div>
+            <div class="choice-option">NAPRA schedules are determined solely by the federal government without provincial input.</div>
+            <div class="choice-option">Each province in Canada develops its own unique drug schedules independently of NAPRA.</div>
+            <div class="choice-option">NAPRA schedules were in place before the federal F, G, and N schedules.</div>
+            <div class="choice-option">The primary purpose of NAPRA schedules is to set drug prices across Canada.</div>
+            <div class="choice-option">Ontario only follows federal drug schedules F, G, and N, not NAPRA.</div>
+            <div class="choice-option">The NDSAC is a committee within each individual pharmacy that sets local schedules.</div>
+            <div class="choice-option">Harmonization of drug scheduling across provinces was not a goal of NAPRA.</div>
+            <div class="choice-option">NAPRA schedules are only recommendations and not legally binding in any province.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_002">
+        <p class="question-text">Based on the definition of a "drug" whose sale is restricted, as outlined in the text, which two of the following would be included?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">A substance referred to in Provincial Schedules I, II, or III.</div>
+            <div class="choice-option" data-correct="true">A substance referred to in Federal Schedules F (now PDL), G, or N.</div>
+            <div class="choice-option">A substance offered for sale as a food, such as cheese.</div>
+            <div class="choice-option">A substance listed in Schedule "U" (Unscheduled).</div>
+            <div class="choice-option">A cosmetic item like toothpaste.</div>
+            <div class="choice-option">Any substance sold within a pharmacy's premises.</div>
+            <div class="choice-option">Only substances that cause psychoactive effects.</div>
+            <div class="choice-option">Herbal teas sold in a health food store.</div>
+            <div class="choice-option">Bottled water.</div>
+            <div class="choice-option">A beverage like fruit juice.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_003">
+        <p class="question-text">The NAPRA drug scheduling system uses a "Cascading Model." Which two statements accurately reflect the principles of this model?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Drugs are assessed based on the risk they pose to the public.</div>
+            <div class="choice-option" data-correct="true">The level of professional supervision needed for the sale of a drug is a key factor in its scheduling.</div>
+            <div class="choice-option">All drugs start at Schedule I and gradually cascade down to Schedule U over time.</div>
+            <div class="choice-option">The model primarily considers the manufacturing cost of the drug.</div>
+            <div class="choice-option">The cascading model ensures that all drugs requiring a prescription are also federally scheduled.</div>
+            <div class="choice-option">This model is unique to Ontario and not part of the national NAPRA framework.</div>
+            <div class="choice-option">The model prioritizes patient convenience over public safety.</div>
+            <div class="choice-option">Once a drug is scheduled, its position in the cascade is permanent and cannot be reassessed.</div>
+            <div class="choice-option">The cascading model applies only to new drugs entering the market.</div>
+            <div class="choice-option">The model ensures that Schedule III drugs require more supervision than Schedule II drugs.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_004">
+        <p class="question-text">Regarding NAPRA Schedule I drugs, which two conditions for their sale are highlighted in the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">They require a prescription for sale.</div>
+            <div class="choice-option" data-correct="true">They are provided to the public by the pharmacist following diagnosis and professional intervention of a practitioner.</div>
+            <div class="choice-option">All Schedule I drugs under NAPRA are also listed under the federal Prescription Drug List (PDL).</div>
+            <div class="choice-option">The "Rx" symbol must be present on the packaging of all NAPRA Schedule I drugs.</div>
+            <div class="choice-option">Pharmacists can dispense Schedule I drugs without a prescription if they conduct a thorough patient assessment.</div>
+            <div class="choice-option">Schedule I drugs can be self-selected by patients if they are located within 10 meters of the pharmacy counter.</div>
+            <div class="choice-option">The sale of Schedule I drugs is not controlled in a regulated environment as defined by provincial pharmacy legislation.</div>
+            <div class="choice-option">NAPRA Schedule I drugs were all previously categorized under the federal "G" schedule.</div>
+            <div class="choice-option">A practitioner's diagnosis is not required if the patient has a previous history of using the Schedule I drug.</div>
+            <div class="choice-option">Schedule I drugs are only those manufactured within Canada.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_005">
+        <p class="question-text">For NAPRA Schedule II drugs, which two of the following statements accurately describe their sale conditions?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">They do not require a prescription but require professional intervention from the pharmacist at the point of sale.</div>
+            <div class="choice-option" data-correct="true">They must be retained within an area of the pharmacy where there is no public access and no opportunity for patient self-selection (e.g., "Behind the Counter").</div>
+            <div class="choice-option">Schedule II drugs can be sold by any pharmacy staff member, including non-registered personnel.</div>
+            <div class="choice-option">Patients can freely access and self-select Schedule II drugs from shelves in the pharmacy.</div>
+            <div class="choice-option">All Schedule N OTC products (like Tylenol 1) can be visibly displayed on shelves behind the pharmacy counter.</div>
+            <div class="choice-option">A pharmacy technician can independently counsel a patient and complete the sale of a Schedule II drug.</div>
+            <div class="choice-option">The pharmacist's intervention for a Schedule II drug is optional if the patient states they have used it before.</div>
+            <div class="choice-option">Schedule II drugs are only available from a "registered member" such as a pharmacist, or an intern/student under pharmacist supervision.</div>
+            <div class="choice-option">If a patient requests a Schedule II drug, the pharmacist must dispense it without considering appropriateness.</div>
+            <div class="choice-option">Schedule II drugs are those that require a prescription but have a lower risk profile than Schedule I.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_006">
+        <p class="question-text">Which two conditions apply to the sale of NAPRA Schedule III drugs in an Ontario pharmacy?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">They can be sold from a self-selection area of the pharmacy, accessible to the patient.</div>
+            <div class="choice-option" data-correct="true">If the pharmacist is not available or leaves the pharmacy, Schedule III products must be locked up and brought back to the dispensary.</div>
+            <div class="choice-option">Schedule III drugs require a prescription, but the pharmacist can authorize refills.</div>
+            <div class="choice-option">These drugs can be sold in any retail store, not just pharmacies.</div>
+            <div class="choice-option">The pharmacist does not need to be physically present in the pharmacy for Schedule III drugs to be sold.</div>
+            <div class="choice-option">The "10 meter rule" ensures that Schedule III products are kept far away from the pharmacy counter to encourage self-selection.</div>
+            <div class="choice-option">Local professional discretionary requirements (e.g., keeping Gravol behind the counter) cannot be applied to Schedule III drugs.</div>
+            <div class="choice-option">Sales of Schedule III drugs are not monitored by the OCP.</div>
+            <div class="choice-option">A pharmacy technician can independently sell Schedule III drugs without a pharmacist being present.</div>
+            <div class="choice-option">The pharmacist only needs to be available for consultation if the patient specifically requests it for a Schedule III drug.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_007">
+        <p class="question-text">Regarding NAPRA Schedule U (Unscheduled) products, which two statements are correct based on the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">They can be sold without professional supervision in any retail location in Ontario.</div>
+            <div class="choice-option" data-correct="true">Adequate information and labelling should be available for the patient to make a safe and effective choice.</div>
+            <div class="choice-option">Schedule U products are still considered "drugs by definition" under NAPRA.</div>
+            <div class="choice-option">These products must be sold by a registered pharmacist, even if in a non-pharmacy retail outlet.</div>
+            <div class="choice-option">Schedule U products are not required to have a DIN or NPN.</div>
+            <div class="choice-option">All vitamins, regardless of strength or formulation, are classified as Schedule U.</div>
+            <div class="choice-option">Patients are not entitled to ask pharmacists questions about Schedule U products.</div>
+            <div class="choice-option">Schedule U products are typically high-risk but have extensive safety information.</div>
+            <div class="choice-option">The sale of Schedule U products is closely monitored by the OCP.</div>
+            <div class="choice-option">Ibuprofen <400mg per unit is always Schedule U, irrespective of package size.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_008">
+        <p class="question-text">The text provides an example of Ibuprofen scheduling. Which two scenarios accurately reflect how Ibuprofen's schedule can change based on its characteristics?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Ibuprofen >400mg per unit is Schedule I.</div>
+            <div class="choice-option" data-correct="true">Ibuprofen <400mg per unit is Schedule III if sold in package sizes larger than 18,000mg total.</div>
+            <div class="choice-option">Ibuprofen <400mg per unit is always Schedule U, regardless of package size.</div>
+            <div class="choice-option">Ibuprofen <400mg per unit in package sizes up to 18,000mg is Schedule II.</div>
+            <div class="choice-option">All strengths of Ibuprofen become Schedule U if they have an NPN.</div>
+            <div class="choice-option">The scheduling of Ibuprofen is determined by the manufacturer, not NAPRA.</div>
+            <div class="choice-option">If Ibuprofen is compounded by a pharmacy, it automatically becomes Schedule I.</div>
+            <div class="choice-option">Package size does not affect the scheduling of Ibuprofen; only strength per unit matters.</div>
+            <div class="choice-option">Ibuprofen scheduling is harmonized globally and does not vary by factors like strength or package size.</div>
+            <div class="choice-option">Ibuprofen <400mg per unit is Schedule I if it is intended for children.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_009">
+        <p class="question-text">The text mentions that "Needles are 'devices' not drugs." What two implications or related points are mentioned regarding devices or specific items?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Despite being devices, needles are not sold in most places, often as part of a harm reduction strategy.</div>
+            <div class="choice-option" data-correct="true">The definition of a "drug" (whose sale is restricted) typically excludes items like food, drink, or cosmetics.</div>
+            <div class="choice-option">All medical devices are scheduled under NAPRA similar to drugs.</div>
+            <div class="choice-option">Needles, being devices, can be sold freely in any retail outlet without restriction.</div>
+            <div class="choice-option">The sale of devices like needles is primarily governed by federal drug schedules.</div>
+            <div class="choice-option">Harm reduction strategies typically encourage the widespread retail availability of needles.</div>
+            <div class="choice-option">If a substance is a device, it cannot also be considered a drug under any circumstances.</div>
+            <div class="choice-option">The text implies that pharmacists have no professional responsibility regarding the sale or provision of devices.</div>
+            <div class="choice-option">Cosmetics like toothpaste are considered Schedule U drugs.</div>
+            <div class="choice-option">The scheduling of devices is determined by the NDSAC.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_010">
+        <p class="question-text">What was a primary reason for Ontario adopting the NAPRA drug schedules, according to the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">To harmonize drug scheduling across Canadian provinces.</div>
+            <div class="choice-option" data-correct="true">To reduce confusion for pharmacists and patients when moving between jurisdictions with previously different rules.</div>
+            <div class="choice-option">To give Ontario pharmacists more autonomy in deciding drug schedules.</div>
+            <div class="choice-option">To replace the federal drug schedules entirely with a new provincial system.</div>
+            <div class="choice-option">To increase the number of drugs available without a prescription.</div>
+            <div class="choice-option">To align Ontario's drug schedules with those of the United States.</div>
+            <div class="choice-option">To simplify the drug approval process for manufacturers.</div>
+            <div class="choice-option">To primarily focus on the cost-effectiveness of medications.</div>
+            <div class="choice-option">To create stricter drug control measures than any other province.</div>
+            <div class="choice-option">To allow for easier international import and export of pharmaceuticals.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_011">
+        <p class="question-text">Which two statements are true regarding the federal drug schedules (F, G, N) in relation to NAPRA, as mentioned in the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Federal F, G, and N schedules were in place before NAPRA.</div>
+            <div class="choice-option" data-correct="true">The definition of a "drug" (whose sale is restricted) includes substances from both NAPRA schedules and these federal schedules.</div>
+            <div class="choice-option">NAPRA schedules have completely replaced and made the federal F, G, and N schedules obsolete.</div>
+            <div class="choice-option">Federal Schedule F was repealed and replaced by the Unscheduled Drug List (UDL).</div>
+            <div class="choice-option">The federal schedules are only applicable if a drug is not covered by a NAPRA schedule.</div>
+            <div class="choice-option">NAPRA and federal schedules are mutually exclusive; a drug cannot be on both.</div>
+            <div class="choice-option">The NDSAC also determines the federal F, G, and N schedules.</div>
+            <div class="choice-option">Federal schedules are only for narcotics, while NAPRA covers all other drugs.</div>
+            <div class="choice-option">Ontario chose not to adopt the federal schedules, only NAPRA.</div>
+            <div class="choice-option">The Prescription Drug List (PDL) is a provincial list separate from federal Schedule F.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_012">
+        <p class="question-text">The text states that for Schedule II drugs, "Pharmacy N OTC products must not be visible". What are two implications of this rule for products like Tylenol 1?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Tylenol 1 (an example of an N OTC product) must be kept where patients cannot see or access it directly.</div>
+            <div class="choice-option" data-correct="true">Patients must specifically request these N OTC products from pharmacy staff.</div>
+            <div class="choice-option">Tylenol 1 can be displayed on shelves behind the counter as long as it's not accessible for self-selection.</div>
+            <div class="choice-option">This rule applies to all Schedule II drugs, not just N OTC products.</div>
+            <div class="choice-option">The "N" symbol indicates that the product is a new drug and visibility is restricted temporarily.</div>
+            <div class="choice-option">Pharmacists can choose to display N OTC products if they provide adequate signage.</div>
+            <div class="choice-option">This visibility restriction only applies if the pharmacy is very small.</div>
+            <div class="choice-option">N OTC products are typically Schedule III, not Schedule II.</div>
+            <div class="choice-option">The rule aims to reduce the sale of these products by making them hard to find.</div>
+            <div class="choice-option">If requested, a pharmacy technician can retrieve and sell Tylenol 1 without pharmacist intervention.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_013">
+        <p class="question-text">What role does a "registered member" (e.g., pharmacist, intern, student under supervision) play in the sale of Schedule II drugs, according to the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Schedule II drugs are only available from a "registered member" of the College (e.g., OCP registered).</div>
+            <div class="choice-option" data-correct="true">A pharmacy intern or registered pharmacy student can handle the sale of a Schedule II drug if they are under the supervision of a pharmacist.</div>
+            <div class="choice-option">Any pharmacy employee can sell Schedule II drugs as long as a pharmacist is on the premises.</div>
+            <div class="choice-option">A registered pharmacy technician can independently counsel and sell Schedule II drugs.</div>
+            <div class="choice-option">The term "registered member" refers only to the designated pharmacy manager.</div>
+            <div class="choice-option">The primary role of the registered member is to record the sale, not necessarily to interact with the patient.</div>
+            <div class="choice-option">Schedule II drugs can be sold by non-members if the patient has a note from their doctor.</div>
+            <div class="choice-option">Supervision is not required for interns or students selling Schedule II drugs if they have completed specific training modules.</div>
+            <div class="choice-option">The "registered member" requirement is waived for refills of Schedule II drugs.</div>
+            <div class="choice-option">This requirement is a NAPRA recommendation but not enforced by provincial pharmacy legislation.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_014">
+        <p class="question-text">The text mentions a "10 meter rule" in relation to Schedule III drugs. What are two key aspects of this rule?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Schedule III drugs should be located 10 meters or less away from the pharmacy counter.</div>
+            <div class="choice-option" data-correct="true">The rule is intended to ensure the pharmacist can observe the self-selection area and intervene or select the correct product for the patient if needed.</div>
+            <div class="choice-option">The rule mandates that Schedule III drugs must be at least 10 meters away from the pharmacy entrance.</div>
+            <div class="choice-option">This rule applies to all self-selection areas in the pharmacy, including those for Schedule U products.</div>
+            <div class="choice-option">The 10-meter distance is a minimum requirement; pharmacies are encouraged to place them further away.</div>
+            <div class="choice-option">If a pharmacy is smaller than 10 meters in total length, this rule does not apply.</div>
+            <div class="choice-option">The rule is primarily for security purposes to prevent theft of Schedule III drugs.</div>
+            <div class="choice-option">This rule is a federal requirement under the Food and Drugs Act.</div>
+            <div class="choice-option">The 10-meter rule ensures patients have ample space for private self-selection.</div>
+            <div class="choice-option">Violation of the 10-meter rule automatically reclassifies a Schedule III drug to Schedule II.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_015">
+        <p class="question-text">What are two examples of "local professional discretionary requirements" that might affect the sale of Schedule III drugs, as mentioned in the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">A pharmacy might keep Gravol behind the counter due to concerns about theft or misuse.</div>
+            <div class="choice-option" data-correct="true">A pharmacy might keep Plan B behind the counter in areas where it is prone to theft.</div>
+            <div class="choice-option">Requiring a prescription for all Schedule III drugs.</div>
+            <div class="choice-option">Selling Schedule III drugs only to patients over 18 years of age.</div>
+            <div class="choice-option">Refusing to sell any Schedule III drugs in the pharmacy.</div>
+            <div class="choice-option">Increasing the price of Schedule III drugs to discourage misuse.</div>
+            <div class="choice-option">Requiring patients to sign a waiver before purchasing Schedule III drugs.</div>
+            <div class="choice-option">Only allowing the designated pharmacy manager to sell Schedule III drugs.</div>
+            <div class="choice-option">Displaying Schedule III drugs outside the pharmacy premises for easier access.</div>
+            <div class="choice-option">Mandating pharmacist counselling for every Schedule III drug sale, regardless of patient request.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_016">
+        <p class="question-text">The text mentions that Schedule U drugs should have a DIN or NPN. What are two correct statements related to this?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Drugs (in the context of items requiring such numbers) should generally not be sold without one of these numbers (DIN or NPN).</div>
+            <div class="choice-option" data-correct="true">Some vitamins may still be in the process of receiving their NPNs (Natural Product Numbers).</div>
+            <div class="choice-option">Only drugs requiring a prescription (Schedule I) need a DIN.</div>
+            <div class="choice-option">NPNs are exclusively for homeopathic products, while DINs are for all other drugs.</div>
+            <div class="choice-option">If a product has an NPN, it is automatically classified as Schedule U.</div>
+            <div class="choice-option">DINs and NPNs are assigned by provincial pharmacy regulatory bodies.</div>
+            <div class="choice-option">The presence of a DIN or NPN means the product is guaranteed to be effective.</div>
+            <div class="choice-option">Schedule U drugs are exempt from needing a DIN or NPN because they are sold without supervision.</div>
+            <div class="choice-option">A DIN indicates a drug is manufactured in Canada, while an NPN indicates it's imported.</div>
+            <div class="choice-option">These numbers are primarily for pricing and inventory management, not regulatory status.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_017">
+        <p class="question-text">What is the professional responsibility of pharmacists regarding patient questions about medications, irrespective of the drug's schedule?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Patients are always entitled to ask questions about any medications, including Schedule U products.</div>
+            <div class="choice-option" data-correct="true">It is the pharmacist's professional responsibility to answer drug information questions from patients.</div>
+            <div class="choice-option">Pharmacists are only obligated to answer questions about Schedule I and II drugs.</div>
+            <div class="choice-option">For Schedule U products, patients should be directed to the product labelling and not consult the pharmacist.</div>
+            <div class="choice-option">Answering questions about Schedule III drugs is optional and at the pharmacist's discretion.</div>
+            <div class="choice-option">Pharmacists can charge a fee for answering questions about non-prescription medications.</div>
+            <div class="choice-option">Only registered pharmacy technicians are responsible for answering questions about Schedule U drugs.</div>
+            <div class="choice-option">If a product is unscheduled, the manufacturer is solely responsible for providing all necessary information.</div>
+            <div class="choice-option">Pharmacists should only answer questions if the patient has already purchased the medication.</div>
+            <div class="choice-option">The responsibility to answer questions is limited to medications purchased from that specific pharmacy.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_018">
+        <p class="question-text">The text mentions that the federal Schedule F of the Food and Drug Regulations was repealed. What was it replaced by, according to the information provided?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">The Prescription Drug List (PDL).</div>
+            <div class="choice-option" data-correct="true">As of December 2013, Schedule F was replaced by the PDL.</div>
+            <div class="choice-option">The NAPRA Schedule I.</div>
+            <div class="choice-option">The Unscheduled Drug list (Schedule U).</div>
+            <div class="choice-option">The Controlled Drugs and Substances Act (CDSA).</div>
+            <div class="choice-option">The National Drug Schedule Advisory Committee (NDSAC) recommendations.</div>
+            <div class="choice-option">A new federal Schedule called "Rx Only".</div>
+            <div class="choice-option">Provincial formularies.</div>
+            <div class="choice-option">It was not replaced; prescription drug status is now determined by NAPRA alone.</div>
+            <div class="choice-option">The Food and Drug Act itself was repealed along with Schedule F.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_019">
+        <p class="question-text">What does the text imply about the relationship between a drug having an "Rx" symbol on its packaging and its actual prescription requirement status?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Some products have an "Rx" symbol, typically those listed under the federal Schedule F (now PDL).</div>
+            <div class="choice-option" data-correct="true">Even if a drug doesn't have an "Rx" on the bottle, it may still require a prescription (e.g., if it's a NAPRA Schedule I drug not on the federal list).</div>
+            <div class="choice-option">All drugs requiring a prescription must have an "Rx" symbol on their packaging.</div>
+            <div class="choice-option">The "Rx" symbol is determined by NAPRA, not federal regulations.</div>
+            <div class="choice-option">If a drug has an "Rx" symbol, it is automatically a federal Schedule G (Controlled) drug.</div>
+            <div class="choice-option">The absence of an "Rx" symbol means a drug can be sold without any pharmacist intervention.</div>
+            <div class="choice-option">Only imported drugs carry the "Rx" symbol.</div>
+            <div class="choice-option">The "Rx" symbol indicates the drug is eligible for ODB coverage.</div>
+            <div class="choice-option">The "Rx" symbol is gradually being phased out and replaced by NAPRA schedule indicators.</div>
+            <div class="choice-option">If a drug is NAPRA Schedule I, it will always have an "Rx" symbol.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_020">
+        <p class="question-text">The text mentions that for Schedule II drugs, a pharmacy technician "would not likely be sufficient" for counselling. What are two reasons provided or implied for this?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Pharmacy technicians don't often have the clinical knowledge required to counsel on many drugs.</div>
+            <div class="choice-option" data-correct="true">The pharmacy technician might not be aware of the patient's past prescriptions, which is a cognitive issue the pharmacist would be responsible for.</div>
+            <div class="choice-option">Pharmacy technicians are legally prohibited from speaking to patients about any medication.</div>
+            <div class="choice-option">Counselling for Schedule II drugs is too time-consuming for technicians.</div>
+            <div class="choice-option">Only pharmacists are allowed to access patient profiles.</div>
+            <div class="choice-option">Technicians are primarily responsible for dispensing, not patient interaction.</div>
+            <div class="choice-option">The risk of adverse drug reactions with Schedule II drugs is too high for technician involvement.</div>
+            <div class="choice-option">This is a NAPRA recommendation that is not strictly enforced in Ontario.</div>
+            <div class="choice-option">Technicians are not considered "registered members" of the College.</div>
+            <div class="choice-option">The pharmacist must personally hand over all Schedule II drugs to the patient.</div>
+        </div>
+    </div>
+
+     <div class="question-item" data-id="juris_A_021">
+        <p class="question-text">What two conditions must be met for a substance to NOT be defined as a "drug" whose sale is restricted, according to the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">The substance is offered for sale as a food, drink, or cosmetic.</div>
+            <div class="choice-option" data-correct="true">The substance is listed in Schedule "U" (Unscheduled).</div>
+            <div class="choice-option">The substance has a Natural Product Number (NPN).</div>
+            <div class="choice-option">The substance is sold in a retail outlet other than a pharmacy.</div>
+            <div class="choice-option">The substance is manufactured outside of Canada.</div>
+            <div class="choice-option">The substance does not require a prescription.</div>
+            <div class="choice-option">The substance is intended for veterinary use only.</div>
+            <div class="choice-option">The substance is a medical device.</div>
+            <div class="choice-option">The substance is available for self-selection by the patient.</div>
+            <div class="choice-option">The substance is priced below a certain threshold.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_022">
+        <p class="question-text">What is the pharmacist's responsibility regarding the availability and accessibility for Schedule III drugs?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">The pharmacist should be available, accessible, and approachable to assist the patient in making appropriate self-medication selections.</div>
+            <div class="choice-option" data-correct="true">Schedule III products should be located in the "professional services area" of the pharmacy, clearly identified and accessible to the patient.</div>
+            <div class="choice-option">The pharmacist must personally hand over all Schedule III drugs to the patient.</div>
+            <div class="choice-option">Schedule III drugs should be kept out of patient reach, similar to Schedule II drugs.</div>
+            <div class="choice-option">The pharmacist's presence is only required if the patient has specific questions about a Schedule III drug.</div>
+            <div class="choice-option">Schedule III drugs can be sold by any staff member as long as they are within the pharmacy.</div>
+            <div class="choice-option">Accessibility for Schedule III drugs means they can be placed anywhere in the store for convenience.</div>
+            <div class="choice-option">The "professional services area" for Schedule III drugs can be located outside the pharmacy.</div>
+            <div class="choice-option">Pharmacists are not required to intervene in the sale of Schedule III drugs unless explicitly asked.</div>
+            <div class="choice-option">The primary responsibility for Schedule III drugs is ensuring they are priced correctly.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_023">
+        <p class="question-text">The text gives an example of ASA (aspirin) scheduling. Which two statements correctly reflect this example?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">80mg ASA is mentioned as an example of a Schedule II drug.</div>
+            <div class="choice-option" data-correct="true">81mg ASA is mentioned as an example of a Schedule III drug.</div>
+            <div class="choice-option">All strengths of ASA are Schedule U.</div>
+            <div class="choice-option">81mg ASA was developed to make it a prescription-only (Schedule I) drug.</div>
+            <div class="choice-option">The scheduling difference between 80mg and 81mg ASA is due to different manufacturers.</div>
+            <div class="choice-option">The example implies that drug companies cannot influence scheduling by altering formulations.</div>
+            <div class="choice-option">Both 80mg and 81mg ASA are Schedule II because of concerns about children's use.</div>
+            <div class="choice-option">The scheduling of ASA is primarily based on its cost.</div>
+            <div class="choice-option">This ASA scheduling example is unique to federal regulations, not NAPRA.</div>
+            <div class="choice-option">The text suggests 81mg ASA is safer for children than 80mg ASA.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_024">
+        <p class="question-text">What is the implication if a pharmacist is not present or leaves the pharmacy, concerning Schedule III products?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Schedule III products should be locked up and brought back to the dispensary.</div>
+            <div class="choice-option" data-correct="true">Patients would not be able to buy Schedule III products without a pharmacist there.</div>
+            <div class="choice-option">A registered pharmacy technician can continue to sell Schedule III products.</div>
+            <div class="choice-option">The self-selection area for Schedule III drugs can remain open to the public.</div>
+            <div class="choice-option">Schedule III products can be sold by any remaining staff, provided they consult a pharmacist by phone.</div>
+            <div class="choice-option">This rule only applies if the pharmacist is absent for more than one hour.</div>
+            <div class="choice-option">The pharmacy must close entirely if the pharmacist leaves.</div>
+            <div class="choice-option">Schedule III products are moved to the Schedule U section temporarily.</div>
+            <div class="choice-option">This is a guideline, and pharmacies can use their discretion based on staffing levels.</div>
+            <div class="choice-option">Patients can take Schedule III products and pay for them later when the pharmacist returns.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_025">
+        <p class="question-text">The sale of Schedule II drugs requires "professional intervention of the pharmacist." What are two examples or aspects of this intervention mentioned in the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">The pharmacist should acknowledge the patient and give some instruction.</div>
+            <div class="choice-option" data-correct="true">The pharmacist should consider the appropriateness of the drug for the patient.</div>
+            <div class="choice-option">The pharmacist must obtain a written prescription from the patient.</div>
+            <div class="choice-option">The pharmacist is only required to verify the patient's age.</div>
+            <div class="choice-option">The intervention primarily involves checking for drug interactions with other Schedule II drugs only.</div>
+            <div class="choice-option">This intervention can be fully delegated to a non-registered assistant.</div>
+            <div class="choice-option">The pharmacist must observe the patient taking the first dose.</div>
+            <div class="choice-option">The intervention is limited to providing a printed information leaflet.</div>
+            <div class="choice-option">The pharmacist must record the sale in a federal narcotics register.</div>
+            <div class="choice-option">The pharmacist's main role is to ensure the product is not expired.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_026">
+        <p class="question-text">How did the adoption of NAPRA schedules aim to resolve previous confusion, according to the text?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">It addressed confusion for pharmacists moving between jurisdictions with different rules.</div>
+            <div class="choice-option" data-correct="true">It addressed confusion for patients who found a drug needed a prescription in one province but not another.</div>
+            <div class="choice-option">It standardized the pricing of all drugs across Canada.</div>
+            <div class="choice-option">It eliminated the need for federal drug schedules entirely.</div>
+            <div class="choice-option">It allowed each pharmacy to set its own internal drug schedules.</div>
+            <div class="choice-option">It simplified the NDSAC drug review process by removing public input.</div>
+            <div class="choice-option">It mandated that all provinces adopt identical lists of unscheduled products.</div>
+            <div class="choice-option">It primarily focused on harmonizing the appearance of drug packaging.</div>
+            <div class="choice-option">It resolved confusion by making all drugs require a prescription initially.</div>
+            <div class="choice-option">It created a single, unified schedule for all drugs, eliminating I, II, III, and U categories.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_027">
+        <p class="question-text">What is the status of Schedule F of the Food and Drug Regulations as of December 2013, and what replaced it?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Schedule F of the Food and Drug Regulations has been repealed.</div>
+            <div class="choice-option" data-correct="true">It was replaced by the Prescription Drug List (PDL).</div>
+            <div class="choice-option">Schedule F was expanded to include more drugs.</div>
+            <div class="choice-option">It was replaced by the NAPRA Schedule F.</div>
+            <div class="choice-option">Schedule F is still active and works in conjunction with the PDL.</div>
+            <div class="choice-option">It was repealed and not replaced, leaving prescription status to provinces.</div>
+            <div class="choice-option">The PDL is a list of over-the-counter drugs.</div>
+            <div class="choice-option">Schedule F was merged into Schedule G for controlled drugs.</div>
+            <div class="choice-option">The repeal of Schedule F means fewer drugs now require a prescription federally.</div>
+            <div class="choice-option">The Prescription Drug List (PDL) is managed by the NDSAC.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_028">
+        <p class="question-text">Which two types of substances are explicitly mentioned as NOT being defined as a "drug" whose sale is restricted under the discussed framework?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">A substance offered for sale as a food (e.g., cheese).</div>
+            <div class="choice-option" data-correct="true">A substance offered for sale as a cosmetic (e.g., toothpaste, lipstick).</div>
+            <div class="choice-option">A substance listed in NAPRA Schedule III.</div>
+            <div class="choice-option">A natural health product with an NPN.</div>
+            <div class="choice-option">A substance listed in federal Schedule G.</div>
+            <div class="choice-option">Any vitamin supplement.</div>
+            <div class="choice-option">A substance sold only in pharmacies.</div>
+            <div class="choice-option">A substance that requires refrigeration.</div>
+            <div class="choice-option">A homeopathic preparation.</div>
+            <div class="choice-option">A substance used for diagnostic purposes.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_029">
+        <p class="question-text">What is the key difference in availability and pharmacist involvement between NAPRA Schedule II and Schedule III drugs?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Schedule II requires professional intervention from the pharmacist at the point of sale and must be kept in a non-public access area, whereas Schedule III allows for self-selection by the patient in a designated area with pharmacist presence.</div>
+            <div class="choice-option" data-correct="true">Schedule II drugs are "behind the counter" requiring a request, while Schedule III drugs are in a self-serve area (pharmacist must still be present in the pharmacy).</div>
+            <div class="choice-option">Schedule II drugs require a prescription, while Schedule III drugs do not.</div>
+            <div class="choice-option">Schedule III drugs require more intensive pharmacist counselling than Schedule II drugs.</div>
+            <div class="choice-option">There is no significant difference; both are non-prescription and require minimal pharmacist involvement.</div>
+            <div class="choice-option">Schedule II drugs can be sold by technicians independently, but Schedule III requires a pharmacist.</div>
+            <div class="choice-option">Schedule III drugs must be locked up if the pharmacist leaves, but Schedule II drugs can remain accessible.</div>
+            <div class="choice-option">The "10 meter rule" applies to Schedule II drugs, not Schedule III.</div>
+            <div class="choice-option">Schedule II drugs are monitored by OCP, whereas Schedule III drugs are not.</div>
+            <div class="choice-option">Schedule II drugs are typically higher cost than Schedule III drugs.</div>
+        </div>
+    </div>
+
+    <div class="question-item" data-id="juris_A_030">
+        <p class="question-text">The text states, "Drugs may be placed in more than one schedule based on form, strength, package size." Which two examples from the text illustrate this principle?</p>
+        <div class="choices">
+            <div class="choice-option" data-correct="true">Ibuprofen <400mg per unit is Schedule U (in package sizes up to 18,000mg), but Schedule III if sold in package sizes larger than 18,000mg.</div>
+            <div class="choice-option" data-correct="true">80mg ASA is mentioned as Schedule II, while 81mg ASA is Schedule III.</div>
+            <div class="choice-option">Tylenol 1 is Schedule II, while Tylenol 3 is Schedule I.</div>
+            <div class="choice-option">Gravol can be Schedule III or kept behind the counter based on pharmacist discretion, illustrating varying forms.</div>
+            <div class="choice-option">All narcotics are Schedule N, regardless of strength or package size.</div>
+            <div class="choice-option">Needles are devices, but their packaging size determines if they are sold in pharmacies.</div>
+            <div class="choice-option">Schedule F drugs became the PDL, illustrating a change in form of regulation.</div>
+            <div class="choice-option">Vitamins can be Schedule U or require an NPN based on their strength.</div>
+            <div class="choice-option">Cosmetics like lipstick can become Schedule III if they contain active medicinal ingredients.</div>
+            <div class="choice-option">All drugs start as Schedule I and can move to other schedules based on their market duration (package size of time).</div>
+        </div>
+    </div>
+
+</div>
