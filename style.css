@@ -1,44 +1,58 @@
 /* style.css */
 
+/* General body styling - font family is set in index.html via Tailwind config */
+body {
+    /* Tailwind's font-sans (Inter) is applied via body class in index.html */
+}
+
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #1e293b; /* slate-800 from Tailwind, or gemini-surface-contrast if preferred */
+    background: #282a2c; /* gemini-surface-contrast */
 }
 ::-webkit-scrollbar-thumb {
-    background: #475569; /* slate-600 from Tailwind, or gemini-border */
+    background: #475569; /* slate-600 - could use a gemini-border or accent */
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #64748b; /* slate-500 from Tailwind, or gemini-accent */
+    background: #8ab4f8; /* gemini-accent */
 }
 
-/* Basic styling for custom checkboxes if needed, Tailwind handles most visual aspects via classes */
-/* The .custom-checkbox:checked class in the original HTML was for demonstration;
-   Tailwind's default checkbox styling or custom forms plugin is usually preferred.
-   If you need specific overrides that Tailwind can't achieve easily, they can go here.
-   For now, relying on Tailwind classes applied in HTML.
-*/
+/* Navigation Buttons Styling */
+.nav-button {
+    /* Base styles are mostly handled by Tailwind in index.html */
+}
 
-/* Hover states for nav buttons (can also be done purely with Tailwind hover: variants) */
 .nav-button:hover {
-    background-color: #334155; /* slate-700, or gemini-surface if preferred from config */
-    /* Example: background-color: var(--gemini-surface); if using CSS variables from JS */
+    background-color: #334155; /* slate-700 - consistent hover for all nav buttons */
 }
 
-/* Example active state for nav buttons, can be toggled with JS */
+/* General active state for navigation buttons */
 .nav-button-active {
-     background-color: #4f46e5; /* indigo-600, or gemini-accent */
-     color: white; /* Or gemini-dark-bg if accent is light */
+     background-color: #8ab4f8; /* gemini-accent */
+     color: #131314; /* gemini-dark-bg for text on accent bg */
 }
 
-/* General body styling if not fully covered by Tailwind body classes */
-body {
-    font-family: 'Inter', sans-serif; /* Example: Using a common sans-serif font */
-    /* Tailwind's font-sans usually defaults to a good system stack */
+/* Styling for individual topic buttons within the (now always visible) dropdown area */
+.topic-button {
+    /* Tailwind class p-[9px] in index.html handles padding */
 }
 
-/* Additional global styles or component-specific overrides can go here */
+/* Active state for a selected topic button */
+.topic-button-active {
+    background-color: #8ab4f8; /* gemini-accent */
+    color: #131314; /* gemini-dark-bg for text */
+    font-weight: 600; /* semi-bold */
+}
+
+/* REMOVED styles related to dropdown toggle and arrow, as it's no longer toggled */
+/* #btnToggleTopics.dropdown-open { ... } */
+/* #topic-arrow { ... } */
+/* #topic-arrow.rotate-180 { ... } */
+
+#feedback-content-area p, #feedback-content-area h4 {
+    /* Spacing within feedback items can be adjusted here if needed */
+}
